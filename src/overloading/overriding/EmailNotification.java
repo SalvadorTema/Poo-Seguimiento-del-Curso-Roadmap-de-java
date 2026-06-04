@@ -1,10 +1,12 @@
 package overloading.overriding;
 
-public class EmailNotification {
+public class EmailNotification extends Notification {
+    public EmailNotification(String mensaje) {
+        super(mensaje);
+    }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+    @Override
+    public void enviar() {
+        System.out.println("📬 Enviando correo electrónico con el mensaje: " + mensaje);
+    }
 }
